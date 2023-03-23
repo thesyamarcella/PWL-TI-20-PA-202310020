@@ -106,19 +106,15 @@ const PersonalDataForm = () => {
             </Form.Group>
           </div>
 
-          <Form.Group className="mb-3 me-2" controlId="LName">
-            <Form.Label>Birthdate</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="YYYY-MM-DD"
-              onChange={(e) => setBirthdate(e.target.value)}
-              required
-            />
-            <Form.Control.Feedback></Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">
-              Birthdate is a required field
-            </Form.Control.Feedback>
-          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBirthdate">
+          <input
+                placeholder="YYYY-MM-DD"
+                type="text"
+                class="form-control datepicker"
+                name="Birthdate"
+                onChange={(e) => setBirthdate(e.target.value)}
+                required />
+                </Form.Group>
 
           <Button variant="primary" className="mt-2" type="submit">
             Submit
